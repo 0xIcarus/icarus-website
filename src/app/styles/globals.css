@@ -14,6 +14,35 @@
   }
 }
 
+.toast-container .Toastify__toast {
+  background-color: #100404 !important; /* Dark background */
+  color: text-orange-800; /* Orange text color */
+  border-radius: 8px;
+  border: 2px solid #321609; /* Orange border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toast-container .Toastify__toast--success {
+  background-color: #16a34a; /* Green for success */
+}
+
+.toast-container .Toastify__toast--error {
+  background-color: #dc2626; /* Red for error */
+}
+
+.toast-container .Toastify__toast--info {
+  background-color: #2563eb; /* Blue for info */
+}
+
+.toast-container .Toastify__toast--warning {
+  background-color: #eab308; /* Yellow for warnings */
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  background-color: #fbbf24; /* Orange progress bar */
+}
+
 .projects-container {
   padding: 24px;
 }

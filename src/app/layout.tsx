@@ -15,6 +15,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <title>Icarus</title>
       </head>
       <body className="min-h-screen flex flex-col crt">
         <ThemeProvider attribute="class">

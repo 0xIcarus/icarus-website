@@ -10,6 +10,9 @@ import {
   FaDiscord,
   FaEnvelope,
 } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Filter } from "bad-words";
 
 const socials = [
   { name: "Twitter", url: "https://twitter.com/icarus_rs", icon: FaTwitter },
@@ -41,23 +44,40 @@ interface Signature {
   message: string;
 }
 
+const filter = new Filter();
+
 export default function ContactPage() {
   const [signatures, setSignatures] = useState<Signature[]>([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(true); // Loading state for guestbook data
 
   useEffect(() => {
     fetch(
       "https://script.google.com/macros/s/AKfycbzkcE10L6U3FqNr7AVWCMHLMOkkUI_dB9sxrV7ARH4o6qce3a8SEk-EThsRAUKgeZQ4/exec",
     )
       .then((res) => res.json())
-      .then(setSignatures)
-      .catch((err) => console.error("Failed to load signatures:", err));
+      .then((data) => {
+        setSignatures(data);
+        setLoading(false); // Stop loading when data is fetched
+      })
+      .catch((err) => {
+        console.error("Failed to load signatures:", err);
+        setLoading(false); // Stop loading even if there's an error
+      });
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!name.trim() || !message.trim()) return;
+
+    if (filter.isProfane(message)) {
+      toast.error(
+        "Your message contains inappropriate language. Please try again.",
+      );
+      return;
+    }
 
     const response = await fetch(
       "https://script.google.com/macros/s/AKfycbzkcE10L6U3FqNr7AVWCMHLMOkkUI_dB9sxrV7ARH4o6qce3a8SEk-EThsRAUKgeZQ4/exec",
@@ -132,7 +152,17 @@ export default function ContactPage() {
         <div className="mt-6">
           <h2 className="text-xl font-semibold text-orange-300">Guestbook</h2>
           <div className="mt-4 space-y-3">
-            {signatures.length > 0 ? (
+            {loading ? (
+              // Skeleton Loader
+              <div className="space-y-3">
+                {[...Array(3)].map((_, i) => (
+                  <div key={i} className="animate-pulse flex space-x-4">
+                    <div className="h-4 w-3/4 bg-gray-900 rounded-md"></div>
+                    <div className="h-4 w-1/4 bg-gray-900 rounded-md"></div>
+                  </div>
+                ))}
+              </div>
+            ) : signatures.length > 0 ? (
               signatures.map((sig, i) => (
                 <div key={i} className="border-l-4 border-orange-500/20 pl-4">
                   <p className="text-orange-200">
@@ -148,6 +178,8 @@ export default function ContactPage() {
           </div>
         </div>
       </motion.div>
+
+      <ToastContainer className="toast-container" />
     </div>
   );
 }
