@@ -21,7 +21,7 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
       >
         <h1 className="text-3xl font-bold text-orange-400">/blog</h1>
         <p className="text-orange-300 mt-2">
-          thoughts, tutorials, and technical writeups.
+          my thoughts, writeups and ramblings.
         </p>
         <div className="mt-6 space-y-6">
           {posts.length > 0 ? (
