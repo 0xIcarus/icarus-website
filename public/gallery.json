@@ -1,0 +1,66 @@
+[
+  {
+    "src": "/gallery/image1.jpeg",
+    "caption": "Nightcall. Working on writing my own consensus protocol"
+  },
+
+  {
+    "src": "/gallery/image2.jpeg",
+    "caption": "A really cool coin - French Euro"
+  },
+
+  {
+    "src": "/gallery/image3.jpeg",
+    "caption": "Based systems devs meetup"
+  },
+
+  {
+    "src": "/gallery/image4.jpeg",
+    "caption": "First time setting up the FlipperZero"
+  },
+
+  {
+    "src": "/gallery/image5.jpeg",
+    "caption": "Running DOOM on the FlipperZero"
+  },
+
+  {
+    "src": "/gallery/image6.jpeg",
+    "caption": "Writing a custom eBPF VM for ZK-SNARKS execution"
+  },
+
+  {
+    "src": "/gallery/image7.jpeg",
+    "caption": "My battlestation in all glory"
+  },
+
+  {
+    "src": "/gallery/image8.jpeg",
+    "caption": "You keep me under your spell..."
+  },
+
+  {
+    "src": "/gallery/image9.jpeg",
+    "caption": "Evening at my battlestation"
+  },
+
+  {
+    "src": "/gallery/image10.jpeg",
+    "caption": "Calming evening at my room"
+  },
+
+  {
+    "src": "/gallery/image11.jpeg",
+    "caption": "All you need barebones setup"
+  },
+
+  {
+    "src": "/gallery/image12.jpeg",
+    "caption": "Cool car I spotted"
+  },
+
+  {
+    "src": "/gallery/image13.jpeg",
+    "caption": "My vulnerability report to NASA - Accepted!"
+  }
+]

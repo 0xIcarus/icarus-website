@@ -1,101 +1,127 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { motion } from "framer-motion";
+import RetroButton from "./components/RetroButton";
+import { Terminal, Code2, Boxes } from "lucide-react";
+import { useEffect, useState } from "react";
+
+export default function HomePage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const textToType = "20. Hacker & Systems Engineer_";
+  const [typedText, setTypedText] = useState("");
+
+  useEffect(() => {
+    if (mounted) {
+      let index = 0;
+      const interval = setInterval(() => {
+        setTypedText(textToType.slice(0, index));
+        index++;
+        if (index > textToType.length) clearInterval(interval);
+      }, 50);
+      return () => clearInterval(interval);
+    }
+  }, [mounted]);
+
+  const [hexGrid, setHexGrid] = useState<string[]>([]);
+
+  useEffect(() => {
+    const generateHexGrid = () =>
+      Array.from({ length: 15 }, () =>
+        Array.from({ length: Math.floor(Math.random() * 20 + 10) }, () =>
+          Math.random().toString(16).substring(2, 4),
+        ).join(" "),
+      );
+
+    setHexGrid(generateHexGrid());
+
+    const interval = setInterval(() => {
+      setHexGrid(generateHexGrid());
+    }, 200);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="relative mt-24">
+      <div className="absolute top-0 right-0 w-1/2 max-h-screen pointer-events-none opacity-10">
+        <div className="absolute top-20 right-10 text-orange-500 font-mono text-xs">
+          {hexGrid.map((line, i) => (
+            <div key={i} className="my-2">
+              {line}
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative z-10"
+      >
+        <div className="mb-12">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-6xl md:text-8xl font-bold text-orange-500/90 mb-6 glitch-text [font-style:italic]"
+          >
+            &gt; icarus_
+          </motion.div>
+
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-xl text-orange-400/60 max-w-xl font-mono"
+          >
+            <span className="text-orange-300/80">$</span> {typedText}
+            <span className="animate-pulse">|</span>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl"
+          variants={{
+            show: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="hidden"
+          animate="show"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <RetroButton
+            href="/about"
+            text="WHOAMI"
+            icon={<Terminal className="w-5 h-5" />}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <RetroButton
+            href="/projects"
+            text="PROJECTS"
+            icon={<Code2 className="w-5 h-5" />}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <RetroButton
+            href="/blog"
+            text="BLOG"
+            icon={<Boxes className="w-5 h-5" />}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </motion.div>
+      </motion.div>
+      <div className=" bottom-0 left-0 text-orange-500/25 font-mono text-xs whitespace-pre">
+        {`
+ .-.   .-.   .-. 
+| OO| | OO| | OO|
+|   | |   | |   |
+'^^^' '^^^' '^^^'
+`}
+      </div>
     </div>
   );
 }

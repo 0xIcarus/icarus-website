@@ -1,0 +1,63 @@
+[
+  {
+    "year": "2015-2019",
+    "events": [
+      "Started Programming.",
+      "Started with learning how reverse engineering works",
+      "Started learning C using the [GNU C Manual](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)",
+      "Installed [Linux](https://www.debian.org/) for the first time and started experimenting"
+    ]
+  },
+  {
+    "year": "2020",
+    "events": [
+      "Was working at a small local company as a [software dev](https://www.linkedin.com/in/anirudh-r-prasad/)",
+      "Learnt web hacking and built some tools"
+    ]
+  },
+  {
+    "year": "2021",
+    "events": [
+      "Started working on bug bounties and hacked Stanford University and Cambridge University - details hidden under disclosure"
+    ],
+    "images": ["/stanford.jpeg", "/cambridge.jpeg"]
+  },
+  {
+    "year": "2022",
+    "events": [
+      "Started University!",
+      "Started Working on my [OS](https://github.com/Icarus131/IcarOS)",
+      "Learnt x86 assembly - fluently",
+      "Built [MalwareLabs](https://github.com/Icarus131/MalwareLabs) at a Hackathon (Silicon Rush)",
+      "4th place in university CTF",
+      "Became student head of CTF team at my university"
+    ]
+  },
+  {
+    "year": "2023",
+    "events": [
+      "Held [3rd Place](https://www.instagram.com/p/CqS0D-QJRKe/) all over India while representing my university CTF Team",
+      "Gave a [Talk](https://www.youtube.com/live/2mwgQ-7_ctg?si=CgNFdykr_qrCJZ5g) at IIITB about web security and reverse engineering",
+      "Wrote and obtained the Certified AppSec Practitioner [cert](https://www.linkedin.com/posts/anirudh-r-prasad_secops-certified-appsec-practitioner-cert-activity-7065307923349979136-dToe)",
+      "Started working at [Eclipse](https://www.eclipse.xyz/)"
+    ],
+    "images": ["talk1.jpeg", "talk2.jpeg"]
+  },
+  {
+    "year": "2024",
+    "events": [
+      "Started working on my own [compiler](https://github.com/Icarus131/Yocto)",
+      "Won a state level Hackathon - [HashCode](https://hashcode.theinnovationlab.in/). Won a prize of 50k INR",
+      "Became TA for university Rust Course",
+      "Wrote my own raycasting engine in [Python](https://github.com/Icarus131/boomcaster) and [C](https://github.com/Icarus131/Zoom)",
+      "Wrote my own [C2 Server](https://github.com/Icarus131/nexus-framework)",
+      "Joined [Movement Labs](https://movementlabs.xyz) as a systems engineer"
+    ],
+    "images": ["hashcode.jpeg"]
+  },
+  {
+    "year": "2025",
+    "events": ["[Hacked NASA!](/nasa)"],
+    "images": ["/nasa.jpeg"]
+  }
+]
