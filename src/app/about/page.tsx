@@ -35,7 +35,7 @@ export default function AboutPage() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/NASA"
+            href="/nasa"
             className="text-orange-400 hover:text-orange-200 transition-colors duration-200 underline underline-offset-2"
           >
             NASA
