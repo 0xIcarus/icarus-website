@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 interface TimelineItem {
   year: string;
@@ -36,12 +37,12 @@ export default function WorkPage() {
             /proof_of_work
           </a>{" "}
           -{" "}
-          <a
+          <Link
             href="/resume"
             className="underline underline-offset-2 text-orange-300 hover:text-orange-200 transition-colors duration-200"
           >
             résumé
-          </a>
+          </Link>
         </h1>
         <div className="mt-6 space-y-8 border-l-4 border-orange-500/20 pl-6 relative">
           {timeline.map((item, index) => (
