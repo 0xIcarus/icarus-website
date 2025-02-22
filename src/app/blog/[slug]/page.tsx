@@ -23,6 +23,7 @@ function getBlogPost(slug: string): BlogPost | null {
       content: content,
     };
   } catch (e) {
+    console.error("Error reading blog post", e);
     return null;
   }
 }

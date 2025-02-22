@@ -84,8 +84,8 @@ export default function ContactPage() {
       >
         <h1 className="text-3xl font-bold text-orange-400">/contact</h1>
         <p className="text-orange-300 mt-2">
-          Sign my guestbook or connect with me. I'm most responsive on Discord
-          (lol) and Mail.
+          Sign my guestbook or connect with me. I&apos;m most responsive on
+          Discord (lol) and Mail.
         </p>
 
         <div className="mt-6 flex space-x-6">

@@ -26,12 +26,12 @@ export default function AboutPage() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg text-orange-300"
         >
-          Welcome to my space. I'm a 20-year-old programmer, cybersecurity and
-          systems engineer, and an avid Linux and FOSS enthusiast. My other
+          Welcome to my space. I&apos;m a 20-year-old programmer, cybersecurity
+          and systems engineer, and an avid Linux and FOSS enthusiast. My other
           interests include hardware engineering/hacking, math, backend
           development, systems engineering, system architecture, OSdev, and
           writing rootkits. I also enjoy working with computer graphics. In the
-          past, I've hacked Stanford University, Cambridge University, and{" "}
+          past, I&apos;ve hacked Stanford University, Cambridge University, and{" "}
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -40,7 +40,7 @@ export default function AboutPage() {
           >
             NASA
           </motion.a>
-          . Yes, I'm that hacker your friends told you about.
+          . Yes, I&apos;m that hacker your friends told you about.
         </motion.p>
 
         <motion.p

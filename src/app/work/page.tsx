@@ -61,7 +61,7 @@ export default function WorkPage() {
                   <li key={i}>
                     <ReactMarkdown
                       components={{
-                        a: ({ node, ...props }) => (
+                        a: ({ ...props }) => (
                           <a
                             {...props}
                             className="text-orange-400 hover:text-orange-200 underline"
@@ -69,7 +69,7 @@ export default function WorkPage() {
                             rel="noopener noreferrer"
                           />
                         ),
-                        p: ({ node, ...props }) => <span {...props} />,
+                        p: ({ ...props }) => <span {...props} />,
                       }}
                     >
                       {event}
