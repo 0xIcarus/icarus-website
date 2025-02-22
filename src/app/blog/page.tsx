@@ -6,7 +6,6 @@ import BlogList from "./BlogList";
 async function getBlogPosts() {
   const blogDir = path.join(process.cwd(), "public/blog");
 
-  // Check if directory exists
   if (!fs.existsSync(blogDir)) {
     return [];
   }
