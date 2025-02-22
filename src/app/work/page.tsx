@@ -29,7 +29,13 @@ export default function WorkPage() {
         className="max-w-3xl text-left border border-orange-500/20 p-6 rounded-lg shadow-lg shadow-black/50 backdrop-blur-md"
       >
         <h1 className="text-3xl font-bold text-orange-400">
-          /proof_of_work -{" "}
+          <a
+            href="https://github.com/Icarus131/"
+            className="underline underline-offset-2 text-orange-400 hover:text-orange-200 transition-colors duration-200"
+          >
+            /proof_of_work
+          </a>{" "}
+          -{" "}
           <a
             href="/resume"
             className="underline underline-offset-2 text-orange-300 hover:text-orange-200 transition-colors duration-200"
