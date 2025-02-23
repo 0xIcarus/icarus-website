@@ -47,7 +47,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="relative mt-24">
+    <div className="relative mt-40 overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 max-h-screen pointer-events-none opacity-10">
         <div className="absolute top-20 right-10 text-orange-500 font-mono text-xs">
           {hexGrid.map((line, i) => (
