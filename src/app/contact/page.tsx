@@ -50,7 +50,7 @@ export default function ContactPage() {
   const [signatures, setSignatures] = useState<Signature[]>([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(true); // Loading state for guestbook data
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -59,11 +59,11 @@ export default function ContactPage() {
       .then((res) => res.json())
       .then((data) => {
         setSignatures(data);
-        setLoading(false); // Stop loading when data is fetched
+        setLoading(false);
       })
       .catch((err) => {
         console.error("Failed to load signatures:", err);
-        setLoading(false); // Stop loading even if there's an error
+        setLoading(false);
       });
   }, []);
 
@@ -71,6 +71,13 @@ export default function ContactPage() {
     e.preventDefault();
 
     if (!name.trim() || !message.trim()) return;
+
+    if (filter.isProfane(name)) {
+      toast.error(
+        "Your name contains inappropriate language. Please try again.",
+      );
+      return;
+    }
 
     if (filter.isProfane(message)) {
       toast.error(
@@ -153,7 +160,6 @@ export default function ContactPage() {
           <h2 className="text-xl font-semibold text-orange-300">Guestbook</h2>
           <div className="mt-4 space-y-3">
             {loading ? (
-              // Skeleton Loader
               <div className="space-y-3">
                 {[...Array(3)].map((_, i) => (
                   <div key={i} className="animate-pulse flex space-x-4">
