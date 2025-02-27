@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -69,7 +68,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!name.trim() || !message.trim()) return;
 
     if (filter.isProfane(name)) {
@@ -158,7 +156,7 @@ export default function ContactPage() {
 
         <div className="mt-6">
           <h2 className="text-xl font-semibold text-orange-300">Guestbook</h2>
-          <div className="mt-4 space-y-3">
+          <div className="mt-4 space-y-3 overflow-hidden">
             {loading ? (
               <div className="space-y-3">
                 {[...Array(3)].map((_, i) => (
@@ -171,7 +169,7 @@ export default function ContactPage() {
             ) : signatures.length > 0 ? (
               signatures.map((sig, i) => (
                 <div key={i} className="border-l-4 border-orange-500/20 pl-4">
-                  <p className="text-orange-200">
+                  <p className="text-orange-200 break-words whitespace-pre-wrap overflow-hidden">
                     <span className="font-bold">{sig.name}</span>: {sig.message}
                   </p>
                 </div>
@@ -184,7 +182,6 @@ export default function ContactPage() {
           </div>
         </div>
       </motion.div>
-
       <ToastContainer className="toast-container" />
     </div>
   );
