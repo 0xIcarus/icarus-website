@@ -31,7 +31,8 @@ export default function AboutPage() {
           interests include hardware engineering/hacking, math, backend
           development, systems engineering, system architecture, OSdev, and
           writing rootkits. I also enjoy working with computer graphics. In the
-          past, I&apos;ve hacked Stanford University, Cambridge University, and{" "}
+          past, I&apos;ve hacked Stanford University and Cambridge University
+          when I was 17, and more recently,{" "}
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -49,7 +50,7 @@ export default function AboutPage() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-lg text-orange-300"
         >
-          This site is a reflection of my brain, it is my manifesto. It is my
+          This website is a reflection of my brain. It is my manifesto. It is my
           mind palace.
         </motion.p>
 
