@@ -4,7 +4,7 @@ date: 2024-05-12 09:02:45
 tags:
 ---
 
-![Return](blog/the-return/returnoftheking.png)
+![Return](/blog/the-return/returnoftheking.png)
 
 # Where have you been?
 
@@ -25,4 +25,4 @@ tags:
 ### Goodbye... for now.
 
 - Remember, hack the planet.
-- ![literally me](blog/the-return/wojack.png)
+- ![literally me](/blog/the-return/wojack.png)
