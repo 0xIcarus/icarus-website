@@ -57,7 +57,7 @@
   },
   {
     "year": "2025",
-    "events": ["[Hacked NASA!](/nasa)"],
-    "images": ["/nasa.jpeg"]
+    "events": ["[Hacked NASA!](/nasa)", "Built my own server in my bedroom"],
+    "images": ["/nasa.jpeg", "/anton.png"]
   }
 ]
