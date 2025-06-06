@@ -26,9 +26,9 @@
     "year": "2022",
     "events": [
       "Started University!",
-      "Started Working on my [OS](https://github.com/Icarus131/IcarOS)",
+      "Started Working on my [OS](https://github.com/0xIcarus/IcarOS)",
       "Learnt x86 assembly - fluently",
-      "Built [MalwareLabs](https://github.com/Icarus131/MalwareLabs) at a Hackathon (Silicon Rush)",
+      "Built [MalwareLabs](https://github.com/0xIcarus/MalwareLabs) at a Hackathon (Silicon Rush)",
       "4th place in university CTF",
       "Became student head of CTF team at my university"
     ]
@@ -46,11 +46,11 @@
   {
     "year": "2024",
     "events": [
-      "Started working on my own [compiler](https://github.com/Icarus131/Yocto)",
+      "Started working on my own [compiler](https://github.com/0xIcarus/Yocto)",
       "Won a state level Hackathon - [HashCode](https://hashcode.theinnovationlab.in/). Won a prize of 50k INR",
       "Became TA for university Rust Course",
-      "Wrote my own raycasting engine in [Python](https://github.com/Icarus131/boomcaster) and [C](https://github.com/Icarus131/Zoom)",
-      "Wrote my own [C2 Server](https://github.com/Icarus131/nexus-framework)",
+      "Wrote my own raycasting engine in [Python](https://github.com/0xIcarus/boomcaster) and [C](https://github.com/0xIcarus/Zoom)",
+      "Wrote my own [C2 Server](https://github.com/0xIcarus/nexus-framework)",
       "Joined [Movement Labs](https://movementlabs.xyz) as a systems engineer"
     ],
     "images": ["hashcode.jpeg"]
