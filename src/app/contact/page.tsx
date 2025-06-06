@@ -15,10 +15,10 @@ import { Filter } from "bad-words";
 
 const socials = [
   { name: "Twitter", url: "https://twitter.com/icarus_rs", icon: FaTwitter },
-  { name: "GitHub", url: "https://github.com/Icarus131", icon: FaGithub },
+  { name: "GitHub", url: "https://github.com/0xIcarus", icon: FaGithub },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/icarus__13/",
+    url: "https://www.instagram.com/0xicarus/",
     icon: FaInstagram,
   },
   {

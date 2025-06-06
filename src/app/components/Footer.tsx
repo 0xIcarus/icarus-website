@@ -2,7 +2,7 @@ import { Github, Twitter, Linkedin, Youtube } from "lucide-react";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/Icarus131", label: "GitHub" },
+    { icon: Github, href: "https://github.com/0xIcarus", label: "GitHub" },
     {
       icon: Twitter,
       href: "https://x.com/icarus_rs",
@@ -15,7 +15,7 @@ export default function Footer() {
     },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@icarus__13",
+      href: "https://www.youtube.com/@0xic4rus",
       label: "YouTube",
     },
   ];

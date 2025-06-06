@@ -31,7 +31,7 @@ export default function WorkPage() {
       >
         <h1 className="text-3xl font-bold text-orange-400">
           <a
-            href="https://github.com/Icarus131/"
+            href="https://github.com/0xIcarus/"
             className="underline underline-offset-2 text-orange-400 hover:text-orange-200 transition-colors duration-200"
           >
             /proof_of_work
