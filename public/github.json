@@ -1,13 +1,13 @@
 [
-  "Icarus131/IcarOS",
-  "Icarus131/Yocto",
-  "Icarus131/boomcaster",
-  "Icarus131/merkle-integration",
-  "Icarus131/socketeer",
-  "Icarus131/carver",
-  "Icarus131/Zoom",
-  "Icarus131/nexus-framework",
-  "Icarus131/ptree-kernel-module",
-  "Icarus131/tamagotchi-solana",
-  "Icarus131/v-cache"
+  "0xIcarus/IcarOS",
+  "0xIcarus/Yocto",
+  "0xIcarus/boomcaster",
+  "0xIcarus/merkle-integration",
+  "0xIcarus/socketeer",
+  "0xIcarus/carver",
+  "0xIcarus/Zoom",
+  "0xIcarus/nexus-framework",
+  "0xIcarus/ptree-kernel-module",
+  "0xIcarus/tamagotchi-solana",
+  "0xIcarus/v-cache"
 ]
