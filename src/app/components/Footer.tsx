@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, Youtube } from "lucide-react";
+import Link from "next/link";
 import IconWrapper from "./IconWrapper";
 
 export default function Footer() {
@@ -114,7 +115,7 @@ export default function Footer() {
                 <span className="sr-only">{social.label}</span>
               </a>
             ))}
-            <a
+            <Link
               href="/webring"
               className="text-orange-400 hover:text-orange-300 transition-colors"
             >
@@ -122,7 +123,7 @@ export default function Footer() {
                 <WebringIcon />
               </IconWrapper>
               <span className="sr-only">UD2 Webring</span>
-            </a>
+            </Link>
           </div>
           <p className="text-orange-400/60 text-sm">
             © {new Date().getFullYear()} - Icarus. Powered By My Brain 🧠 ⚡.
