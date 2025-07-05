@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import RetroButton from "./components/RetroButton";
 import { Terminal, Code2, Boxes } from "lucide-react";
 import { useEffect, useState } from "react";
+import IconWrapper from "./components/IconWrapper";
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false);
@@ -100,17 +101,17 @@ export default function HomePage() {
           <RetroButton
             href="/about"
             text="WHOAMI"
-            icon={<Terminal className="w-5 h-5" />}
+            icon={<IconWrapper><Terminal className="w-5 h-5" /></IconWrapper>}
           />
           <RetroButton
             href="/projects"
             text="PROJECTS"
-            icon={<Code2 className="w-5 h-5" />}
+            icon={<IconWrapper><Code2 className="w-5 h-5" /></IconWrapper>}
           />
           <RetroButton
             href="/blog"
             text="BLOG"
-            icon={<Boxes className="w-5 h-5" />}
+            icon={<IconWrapper><Boxes className="w-5 h-5" /></IconWrapper>}
           />
         </motion.div>
       </motion.div>

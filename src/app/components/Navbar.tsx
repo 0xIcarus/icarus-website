@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import IconWrapper from "./IconWrapper";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -71,7 +72,9 @@ export default function Navbar() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-orange-400/70 hover:text-orange-300 p-2"
               >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+                <IconWrapper>
+                  {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </IconWrapper>
               </button>
             </div>
           </div>

@@ -176,3 +176,12 @@ html {
   background: rgba(251, 146, 60, 0.3);
   color: rgb(251, 146, 60);
 }
+
+/* Suppress browser extension modifications that cause hydration mismatches */
+[data-darkreader-inline-stroke] {
+  stroke: currentColor !important;
+}
+
+[style*="--darkreader-inline-stroke"] {
+  stroke: currentColor !important;
+}

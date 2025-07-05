@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import IconWrapper from "./IconWrapper";
 
 type ImageData = {
   src: string;
@@ -106,7 +107,9 @@ export default function Gallery() {
             className="absolute top-4 right-4 text-orange-400 hover:text-white transition-colors duration-300 animate-fade-down"
             onClick={closeImage}
           >
-            <X size={32} />
+            <IconWrapper>
+              <X size={32} />
+            </IconWrapper>
           </button>
 
           <button
@@ -116,7 +119,9 @@ export default function Gallery() {
               prevImage();
             }}
           >
-            <ChevronLeft size={48} />
+            <IconWrapper>
+              <ChevronLeft size={48} />
+            </IconWrapper>
           </button>
 
           <div
@@ -143,7 +148,9 @@ export default function Gallery() {
               nextImage();
             }}
           >
-            <ChevronRight size={48} />
+            <IconWrapper>
+              <ChevronRight size={48} />
+            </IconWrapper>
           </button>
         </div>
       )}

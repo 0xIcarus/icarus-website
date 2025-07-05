@@ -1,4 +1,5 @@
-import { Github, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Github, Twitter, Linkedin, Youtube, Circle } from "lucide-react";
+import IconWrapper from "./IconWrapper";
 
 export default function Footer() {
   const socialLinks = [
@@ -20,6 +21,12 @@ export default function Footer() {
     },
   ];
 
+  const webringLink = {
+    icon: Circle,
+    href: "/webring",
+    label: "UD2 Webring",
+  };
+
   return (
     <footer className="border-t border-orange-900/30 py-8 mt-12 backdrop-blur-sm shadow-sm shadow-black/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,10 +40,21 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-orange-400 hover:text-orange-300 transition-colors"
               >
-                <social.icon className="h-6 w-6" />
+                <IconWrapper className="h-6 w-6">
+                  <social.icon className="h-6 w-6" />
+                </IconWrapper>
                 <span className="sr-only">{social.label}</span>
               </a>
             ))}
+            <a
+              href={webringLink.href}
+              className="text-orange-400 hover:text-orange-300 transition-colors"
+            >
+              <IconWrapper className="h-6 w-6">
+                <webringLink.icon className="h-6 w-6" />
+              </IconWrapper>
+              <span className="sr-only">{webringLink.label}</span>
+            </a>
           </div>
           <p className="text-orange-400/60 text-sm">
             © {new Date().getFullYear()} - Icarus. Powered By My Brain 🧠 ⚡.

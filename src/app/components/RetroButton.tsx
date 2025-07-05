@@ -24,7 +24,11 @@ export default function RetroButton({ href, text, icon }: RetroButtonProps) {
         <div className="group relative">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-600 to-orange-400 opacity-50 blur group-hover:opacity-75 transition duration-300"></div>
           <div className="relative flex items-center bg-[#100404] px-6 py-4 border border-orange-500/30">
-            {icon && <span className="mr-3 text-orange-400">{icon}</span>}
+            {icon && (
+              <span className="mr-3 text-orange-400">
+                {icon}
+              </span>
+            )}
             <span className="relative font-mono text-lg text-orange-400 group-hover:text-orange-300 transition-colors">
               {text}
             </span>
