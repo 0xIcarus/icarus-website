@@ -39,7 +39,7 @@ export default function WebringPage() {
       </div>
       
       <div className="text-orange-400/60 text-xs sm:text-sm space-y-2">
-        <p>You&apos;re currently viewing Icarus&apos; site in the ud2 Webring</p>
+        <p>You&apos;re currently viewing Icarus&apos; site in the ud2 webring</p>
         <p>Click the links above to navigate through the ring</p>
       </div>
     </div>
