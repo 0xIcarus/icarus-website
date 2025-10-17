@@ -32,7 +32,7 @@ export default function AboutPage() {
           development, systems engineering, system architecture, OSdev, and
           writing rootkits. I also enjoy working with computer graphics. In the
           past, I&apos;ve hacked Stanford University and Cambridge University
-          when I was 17, and more recently,{" "}
+          when I was 17, and at 20,{" "}
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
