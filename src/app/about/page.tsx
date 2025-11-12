@@ -26,7 +26,7 @@ export default function AboutPage() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg text-orange-300"
         >
-          Welcome to my space. I&apos;m a 20-year-old programmer, cybersecurity
+          Welcome to my space. I&apos;m a 21-year-old programmer, cybersecurity
           and systems engineer, and an avid Linux and FOSS enthusiast. My other
           interests include hardware engineering/hacking, math, backend
           development, systems engineering, system architecture, OSdev, and
