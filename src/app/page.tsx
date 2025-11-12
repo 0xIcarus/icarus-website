@@ -13,7 +13,7 @@ export default function HomePage() {
     setMounted(true);
   }, []);
 
-  const textToType = "20. Hacker & Systems Engineer_";
+  const textToType = "21. Hacker & Systems Engineer_";
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
